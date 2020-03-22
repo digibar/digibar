@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+/*General Style*/
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Regular Oswald;
+}
+
+#id {
+    height: 100%;
+    width: 100%;
+}
+
+#app {
+    magin: 0;
+}
+
+/*Bootstrap Stuff*/
+
+.selector-for-some-widget {
+    box-sizing: content-box;
+}
+
+.container-fluid {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+
+/*Landing Page*/
+
+header {
+
+}
+
+.img-container {
+    text-align: left;
+    position: absolute;
+}
+
+.img-container img {
+    position: relative;
+    text-align: center;
+    margin-top: 2em;
+    border-radius: 0 2em 2em 0;
+
+}
+
+#img_beer_lp {
+    width: auto;
+}
+
+#title_lp {
+    position: absolute;
+    top:10%;
+    left: 50%;
+    color: white;
+    font-size: 4em;
+    letter-spacing: 0.4em;
+    transform: translate(-50%,-50%);
+    margin-top: 1em;
+    width: 100%;
+    text-align: center;
+}
+
+#wirvsvirus_img {
+    margin-top: 100px;
+    height: auto;
+    width: 80%;
+}
+
+h1, h2, h3, h4, h5, h6 {font-family: Oswald}
+
+#container1 {
+    grid-row-gap: 10px;
+    grid-template-columns: auto auto;
+    width: 100%;
+    height: 100%;
+}
+
+#container2 {
+    position: relative;
+    display: grid;
+    grid-row-gap: 10px;
+    grid-template-columns: 40% 20% 40%;
+    width: 80%;
+    height: 100%;
+}
+
+
+.grid_clm {
+    position: relative;
+    text-align: left;
+    align-content: center;
+}
+
+.wrapper {
+    height: 500px;
+    position: relative;
+}
+
+.sign-on {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    padding-left: 15%;
+    padding-right: 5%;
+}
+
+.wrapper_80 {
+    position: absolute;
+    text-align: left;
+}
+
+b-button {
+    color: #7A8286;
+}
+
+#p_city {
+    margin-top: 20px;
+}
+
+/* Bar Setup */
+
+#img_barS {
+ background-image: url("../assets/barsetup/bar-skinny.png");
+  height: 900px
+}
+
+#gridContainer3 {
+    display: grid;
+    grid-template-columns: minmax(30%, 636px) 60%;
+    height: 80%;
+}
+
+#content_barS {
+    padding: 20px;
+}
+
+#signUpForm {
+    height: 900px;
+    padding-left: 100px;
+    padding-right: 50px;
+    padding-top: 50px;
+    max-width: 800px;
+}
+
+
+.btn {
+    width: 200px;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.backArrow {
+    margin-top: 30px;
+}
+
+@media only screen and (max-width: 650px) {
+
+    #gridContainer3 {
+        display: grid;
+        grid-template-columns: 0 100%;
+        height: 80%;
+    }
+
+    #signUpForm {
+        height: 900px;
+        padding-left: 20px;
+        padding-right: 50px;
+        padding-top: 50px;
+        max-width: 800px;
+    }
+}
+
+#barName {
+    font-weight: bold;
+}
+
