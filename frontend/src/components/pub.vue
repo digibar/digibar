@@ -1,15 +1,5 @@
 <template>
-    <div class="container-fluid">
-      <div class="navi" style="font-size: 42px;">
-        <router-link v-bind:to="'/bars'" style="color: #000000;">
-            <img class="backArrow" src="../assets/barsetup/back@2x.png" height="auto" width="35"/>
-        </router-link>
-      </div>
-
-    <div class="pub" >
-      <h2> Enjoy pub {{bar.name}}!</h2>
-    </div>
-
+  <div class="pub">
     <div id="container">
     </div>
     <div id="calls">
@@ -537,14 +527,4 @@ export default {
 </script>
 
 <style>
-  .pub {
-    margin: 2rem auto;
-    padding: 0 5rem;
-
-  }
-
-  .container {
-    width: 200px;
-    height: 100px;
-  }
 </style>

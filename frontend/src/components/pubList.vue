@@ -1,35 +1,40 @@
 <template>
-  <div class="container-fluid">
-    <div class="navi" style="font-size: 42px;">
-      <router-link v-bind:to="'/'" style="color: #7A8286;">
-        <img class="backArrow" src="../assets/barsetup/back@2x.png" height="auto" width="35"/>
-      </router-link>
-    </div>
-    <div class="pubListCaption">
-        <div class ="justify-content-between">
-          <h2>
-            <div style= "float:left">Bars in deiner Stadt</div>
-            <div style ="float:right"><font color="green">{{city}}</font></div>
-          </h2>
-        </div>
-    </div>
-    <div class="publist">
-      <div class="publist-panel" v-for="item in items" :key="item.id">
-          <div class= "thumbnail">
-            <router-link v-bind:to="`/bars/${item.id}`">
-                <img :src= "item.image">
-            </router-link>
-          </div>
+   <div id="wrapper">
+     <b-container class="grid">
+        <b-container id="container1"> 
+              <div class="navi" style="font-size: 42px;">   
+                <a id="arrow_link" href="/"> <img id="backArrowNav" class="backArrow" src="../assets/barsetup/back@2x.png" height="auto" width="35"/></a>
+              </div>
+              <div class="pubListCaption">
+                  <div class ="justify-content-between">
+                    <h2>
+                      <div style= "float:left">Bars in deiner Stadt</div>
+                      <div style ="float:right"><font color="green">{{city}}</font></div>
+                    </h2>
+                  </div>
+              </div>
+              <div class="container-fluid">
+                <div class="publist">
+                  <div class="publist-panel" v-for="item in items" :key="item.id">
+                      <div class= "thumbnail">
+                        <router-link v-bind:to="`/bars/${item.id}`">
+                            <img :src= "item.image">
+                        </router-link>
+                      </div>
 
-          <div class= "caption" style = "float:left">
-            <h4>{{item.name}} </h4>
-            <p>{{item.description}} </p>
-          </div>
-          <div class = "user" style = "float:right">
-            {{item.users}} <span style = "font-size: 24px;"> <font-awesome-icon icon="user" /> </span>
-          </div>
-        </div>
-    </div>
+                      <div class= "caption" style = "float:left">
+                        <h4>{{item.name}} </h4>
+                        <p>{{item.description}} </p>
+                      </div>
+                      <div class = "user" style = "float:right">
+                        {{item.users}} <span style = "font-size: 24px;"> <font-awesome-icon icon="user" /> </span>
+                      </div>
+                    </div>
+                </div>
+
+              </div>
+      </b-container>
+    </b-container>
   </div>
 </template>
 
@@ -73,7 +78,6 @@ export default {
     grid-gap: 1rem;
     max-width: 80rem;
     margin: 5rem auto;
-    padding: 0 5rem;
 
   }
 
@@ -89,7 +93,6 @@ export default {
   }
   .pubListCaption {
     margin: 1rem auto;
-    padding: 0 5rem;
   }
   .publist-panel {
     border:1px solid #D3D3D3;
@@ -102,7 +105,6 @@ export default {
 
   .navi {
     margin-top: 15px;
-     padding: 0 5rem;
   }
 
   .user {

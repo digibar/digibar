@@ -1,7 +1,7 @@
 import landingPage from "@/components/landingPage"
 import pubList from "@/components/pubList"
-import pub from "@/components/pub"
 import setup from "@/components/barSetUp"
+import pubNav from "@/components/pubNav"
 import pub3DView from "@/components/pub3DView"
 
 export default [
@@ -17,7 +17,7 @@ export default [
     {
       path: '/bars/:id',
       name: 'pub',
-      component: pub,
+      component: pubNav,
     },
     {
         path: '/barSetup',

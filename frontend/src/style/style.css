@@ -18,6 +18,18 @@ body {
     magin: 0;
 }
 
+.ourButton {
+    border-radius: 10px !important;
+    font-family: Oswald !important;
+    letter-spacing: 0.2em;
+    font-weight: bold;
+    margin-top: 10px !important;
+}
+
+p{
+    font-family: Oswald !important;
+}
+
 /*Bootstrap Stuff*/
 
 .selector-for-some-widget {
@@ -52,6 +64,17 @@ header {
     width: auto;
 }
 
+.dorpdown_custom {
+    height: 40px;
+    font-family: Oswald;
+    border-radius: 5px;
+}
+
+#dropdown_lp{
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
 #title_lp {
     position: absolute;
     top:10%;
@@ -66,9 +89,9 @@ header {
 }
 
 #wirvsvirus_img {
-    margin-top: 100px;
+    margin-top: 70px;
     height: auto;
-    width: 80%;
+    width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {font-family: Oswald}
@@ -89,6 +112,13 @@ h1, h2, h3, h4, h5, h6 {font-family: Oswald}
     height: 100%;
 }
 
+#setUpBtn{
+    margin-top: 31px !important;
+}
+
+#city_btn{
+    margin-bottom: 20px;
+}
 
 .grid_clm {
     position: relative;
@@ -97,7 +127,7 @@ h1, h2, h3, h4, h5, h6 {font-family: Oswald}
 }
 
 .wrapper {
-    height: 500px;
+    height: 450px;
     position: relative;
 }
 
@@ -105,8 +135,9 @@ h1, h2, h3, h4, h5, h6 {font-family: Oswald}
     position: relative;
     width: 100%;
     text-align: center;
-    padding-left: 15%;
-    padding-right: 5%;
+    padding-left: 12%;
+    padding-right: 12%;
+    padding-top: 1%;
 }
 
 .wrapper_80 {
@@ -126,7 +157,13 @@ b-button {
 
 #img_barS {
  background-image: url("../assets/barsetup/bar-skinny.png");
-  height: 900px
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+#header_landing {
+    background-image: url("../assets/landingpage/beers-1283566_1920.png");
 }
 
 #gridContainer3 {
@@ -136,11 +173,11 @@ b-button {
 }
 
 #content_barS {
-    padding: 20px;
+    padding: 0px;
 }
 
 #signUpForm {
-    height: 900px;
+    height: 100vh;
     padding-left: 100px;
     padding-right: 50px;
     padding-top: 50px;
@@ -177,5 +214,161 @@ b-button {
 
 #barName {
     font-weight: bold;
+}
+
+/* Pub Nav */
+
+.grid_nav {
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+    width:100%;
+}
+
+#renderFrame {
+    border: black;
+    border-style: solid;
+    height: 800px;
+    width: 100%;
+    margin-left: 10px;
+}
+
+#nav_col{
+    height: 100%;
+    width: 100%;
+}
+
+#container_nav{
+    display: block;
+    margin-left: 60px;
+}
+
+@media only screen and (max-width: 1350px) {
+
+    #container_nav{
+        display: block;
+        margin-left: 10px;
+    }
+}
+
+#pubName_nav {
+    color: #7A8286;
+    font-family: Oswald, Regular;
+    margin-top: 20px;
+}
+
+.row_divider {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+#card_container {
+    padding-left: 0 !important;
+    width: 100%;
+}
+
+#card_row {
+    padding-left: 15px;
+    width: 100%;
+    padding-bottom: 5px;
+}
+
+#greeting_row {
+    padding-top: 10px;
+}
+
+
+
+.card_col {
+    max-width: 13   0px !important;
+}
+
+.col {
+    padding: 0 !important;
+}
+
+.img_wrapp {
+    height: 140px;
+    width: 110px;
+    align-self: center;
+}
+
+col {
+    text-align: center !important;
+}
+
+#buy_btn {
+    margin-top: 20px;
+}
+
+#offerCont {
+    margin-top: 15px;
+}
+
+.offerLbl {
+    font-family: Oswald;
+    font-size: 20px;
+    color: #7A8286;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.offerDesc {
+    font-family: Oswald;
+    color: #4E4E4E;
+    border-left: 2px solid #90CA47;
+    padding-left: 8px !important;
+}
+
+#offerCont .row{
+    margin-top: 15px;
+    margin-right: 60px;
+    width: 100%;
+}
+
+#offerTitle {
+    margin-top: 5px;
+    margin-right: 10px;
+    margin-bottom: 0px;
+}
+
+#backArrowNav{
+    margin-top: 10px;
+    width: 30px;
+}
+
+#greeting p{
+    font-family: Oswald;
+    font-size: 20px;
+    color: #7A8286;
+    text-align: left;
+    margin-bottom: 0 !important;
+    letter-spacing: 3px;
+    text-align: center;
+
+}
+
+#greeting h2 {
+    font-size: 35px;
+    color: #7A8286;
+    text-align: center;
+    margin-bottom: 0 !important;
+    letter-spacing: 6px;
+    font-family: Oswald;
+    font-weight: 500;
+}
+
+#greeting_pic {
+    padding: 0 !important;
+    margin-left: 12px;
+    text-align: center;
+    max-width: 110px;
+
+}
+
+#greeting_wrapper{
+    text-align: left;
+    margin-top: 10px;
+    max-width: 200px;
 }
 

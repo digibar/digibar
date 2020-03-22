@@ -29,9 +29,20 @@
                                 id="input-2"
                                 v-model="form.description"
                                 required
-                                placeholder="PLZ"
+                                placeholder="Bar Beschreibung"
                         ></b-form-input>
                     </b-form-group>
+
+                     <b-form-group id="input-group-2" label="Stadt:" label-for="input-2">
+                       <div id="mySelect">
+                         <select class="dorpdown_custom" v-model="selected">
+                          <option disabled value="">Bitte wähle eine Stadt aus</option>
+                          <option v-for="location in locations" :key="location.id">{{ location.city }}
+                          </option>
+                        </select>
+                        </div>
+                    </b-form-group>
+
 
                     <b-form-group id="input-group-3" label="Bild von deiner Bar (URL-Format):" label-for="input-3">
                         <b-form-input
@@ -42,7 +53,7 @@
                         ></b-form-input>
                     </b-form-group>
 
-                    <b-button v-on:click="onSubmit" href="/bars/0" id="barS_btn1" class="btn" type="submit">Anmelden</b-button>
+                    <b-button v-on:click="onSubmit" href="" id="barS_btn1" class="btn ourButton" type="submit">Anmelden</b-button>
                 </b-form>
 
             </div>
@@ -55,7 +66,6 @@
 </template>
 
 <script>
-    import {bus} from '../main';
 
     export default {
         data() {
@@ -68,13 +78,25 @@
                 show: true,
                 alert: false,
                 err_msg: '',
+
+                locations: [
+                    {
+                        id: 0,
+                        city: 'Konstanz'
+                    },
+                    {
+                        id: 1,
+                        city: 'Stuttgart'
+                    },
+                    {
+                        id: 2,
+                        city: 'Muenchen'
+                    }
+                ]
             }
         },
         created() {
-          bus.$on('barNameChanged', (data) => {
-              console.log(data);
-              this.name = data;
-            })
+
         },
         computed: {
 
@@ -95,14 +117,17 @@
                 var json = JSON.stringify(this.form);
                 var request = new XMLHttpRequest();
                 var id = encodeURIComponent(this.form.name.toLowerCase().replace(/[ ]/g, '-').replace(/[^a-z0-9-]/g, ''));
+                this.barUrl = 'http://localhost:8080/bars/' + id;
+
                 request.open('PUT', this.$appConfig.backend_uri + 'manage/bars/' + id, false);
                 request.send(json);
+
 
                 if (request.status === 201) {
                     var res = JSON.parse(request.responseText);
                     window.console.log(res);
                     //window.console.log(item.result);
-                    this.$router.push({'name': 'bars'})
+                    this.$router.push({'name': 'bars'});
                     return res;
                 }
                 this.err_msg = 'Keine Verbindung zum Server möglich';
@@ -151,5 +176,7 @@
         margin-bottom: 40px;
     }
 
+    #mySelect select { 
+        width:100%; }
 
 </style>
