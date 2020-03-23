@@ -1,6 +1,6 @@
 <template>
   <div class="pub">
-    <div id="container">
+    <div id="container" class="container_thjs">
     </div>
     <div id="calls">
     </div>
@@ -145,7 +145,7 @@ export default {
 
               var container = document.getElementById( 'container' );
 
-              camera = new THREE.PerspectiveCamera( 30, window.innerWidth / window.innerHeight, 1, 5000 );
+              camera = new THREE.PerspectiveCamera( 30, container.offsetWidth / container.offsetHeight, 1, 5000 );
               camera.position.set( 0, 750, -750 );
 
               scene = new THREE.Scene();
@@ -235,7 +235,7 @@ export default {
 
               renderer = new THREE.WebGLRenderer( { antialias: true } );
               renderer.setPixelRatio( window.devicePixelRatio );
-              renderer.setSize( 640, 480 );
+              renderer.setSize( container.offsetWidth, container.offsetHeight );
               container.appendChild( renderer.domElement );
               renderer.outputEncoding = THREE.sRGBEncoding;
               renderer.shadowMap.enabled = false;
@@ -288,8 +288,8 @@ export default {
               //of the screen is the origin
               var container = document.getElementById( 'container' );
               var rect = container.getBoundingClientRect();
-              mouse.x = ( (e.clientX - rect.left) / 640 ) * 2 - 1;
-              mouse.y = - ( (e.clientY - rect.top) / 480 ) * 2 + 1;
+              mouse.x = ( (e.clientX - rect.left) / container.offsetWidth ) * 2 - 1;
+              mouse.y = - ( (e.clientY - rect.top) / container.offsetHeight ) * 2 + 1;
 
               //set the picking ray from the camera position and mouse coordinates
               raycaster.setFromCamera( mouse, camera );
@@ -527,4 +527,8 @@ export default {
 </script>
 
 <style>
+    .container_thjs {
+        width: 80%;
+        height: 80vh;
+    }
 </style>
