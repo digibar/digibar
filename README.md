@@ -26,3 +26,5 @@ No sleep is also an option ;-)
 
 ## What's next for BierVsVirus
 User Tests! What do users want? Which features should be further developed? Do bar owners want to use this?...
+
+![team](team.png)
